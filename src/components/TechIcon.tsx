@@ -31,7 +31,7 @@ export const TechIcon: React.FC<TechIconProps> = ({icon, label, category = 'othe
             <div className={`text-2xl mb-1 transition-transform duration-300 ${isHovered ? 'scale-125' : ''}`}>
                 {icon}
             </div>
-            <span className={`text-xs ${getCategoryColor()}`}>{label}</span>
+            <span className={`text-xl ${getCategoryColor()}`}>{label}</span>
         </div>
     );
 };

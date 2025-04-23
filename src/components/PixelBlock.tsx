@@ -20,7 +20,7 @@ export const PixelBlock: React.FC<PixelBlockProps> = ({ x, y, delay }) => {
 
     return (
         <div
-            className={`absolute w-4 h-4 bg-cyan-400 transition-opacity duration-1000 ${isVisible ? 'opacity-30' : 'opacity-0'}`}
+            className={`absolute w-4 h-4 bg-cyan-400 transition-opacity duration-1000 ${isVisible ? 'opacity-75' : 'opacity-0'}`}
             style={{
                 left: `${x}%`,
                 top: `${y}%`,
