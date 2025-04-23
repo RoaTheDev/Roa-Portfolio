@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px rgba(0, 224, 255, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(0, 224, 255, 0.8); }
+}
+
+    @keyframes glitch {
+        0% { transform: translate(0) }
+        20% { transform: translate(-3px, 3px) }
+        40% { transform: translate(-3px, -3px) }
+        60% { transform: translate(3px, 3px) }
+        80% { transform: translate(3px, -3px) }
+        100% { transform: translate(0) }
+    }
+
+    @keyframes text-glitch {
+        0% { opacity: 1; transform: translate(0); }
+        20% { opacity: 0.8; transform: translate(-2px, 1px); }
+        40% { opacity: 1; transform: translate(1px, -1px); }
+        60% { opacity: 0.9; transform: translate(-1px, -2px); }
+        80% { opacity: 1; transform: translate(2px, 2px); }
+        100% { opacity: 1; transform: translate(0); }
+    }
+
+    .animate-glow {
+        animation: glow 2s infinite;
+    }
+
+    .animate-glitch {
+        animation: glitch 0.3s infinite;
+    }
+
+    .animate-text-glitch {
+        animation: text-glitch 0.3s infinite;
+    }
+
+    .shadow-glow-green-400:hover {
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.7);
+    }
+
+    .shadow-glow-cyan-400:hover {
+        box-shadow: 0 0 15px rgba(34, 211, 238, 0.7);
+    }
+
+    .shadow-glow-pink-500:hover {
+        box-shadow: 0 0 15px rgba(236, 72, 153, 0.7);
+    }
+
+    .shadow-glow-red-400:hover {
+        box-shadow: 0 0 15px rgba(248, 113, 113, 0.7);
+    }
+
+    .shadow-glow-blue-400:hover {
+        box-shadow: 0 0 15px rgba(96, 165, 250, 0.7);
+    }
+
+    .shadow-glow-yellow-400:hover {
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.7);
+    }
+
+    .shadow-glow-purple-400:hover {
+        box-shadow: 0 0 15px rgba(192, 132, 252, 0.7);
+    }
