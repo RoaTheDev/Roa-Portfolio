@@ -9,6 +9,7 @@ import {SiDotnet, SiElasticsearch, SiRedis, SiShadcnui, SiTailwindcss, SiTypescr
 import {Brain, Code, Coffee, Cpu, Gamepad, Heart, Mail, Server, Star, Users} from 'lucide-react';
 import {DiMsqlServer, DiRedis} from "react-icons/di";
 import {RetroGameDecorations} from "../components/RetroGameDecorations.tsx";
+import {VscAzure} from "react-icons/vsc";
 
 const PixelPortfolio: React.FC = () => {
     const [, setIsAnimating] = useState(false);
@@ -75,7 +76,8 @@ const PixelPortfolio: React.FC = () => {
 
                             {/* Title */}
                             <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 animate-glow">ROA-THE-DEV</h1>
-                            <p className="text-pink-500 font-bold text-xl">.NET Backend Developer</p>
+                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow">.NET Backend
+                                Engineer</p>
                         </div>
 
                         {/* Developer Avatar and Character */}
@@ -109,6 +111,8 @@ const PixelPortfolio: React.FC = () => {
                                         <TechIcon icon={<SiDotnet className="text-purple-400 text-3xl"/>} label=".NET"
                                                   category="backend"/>
                                         <TechIcon icon={<DiMsqlServer className="text-white text-3xl"/>} label="MSSQL"
+                                                  category="backend"/>
+                                        <TechIcon icon={<VscAzure className="text-blue-400 text-3xl"/>} label="Azure"
                                                   category="backend"/>
                                         <TechIcon icon={<DiRedis className="text-red-500 text-3xl"/>} label="Redis"
                                                   category="backend"/>
@@ -177,7 +181,7 @@ const PixelPortfolio: React.FC = () => {
             {/* Main Content */}
             <main className="container mx-auto px-4 py-8">
                 {/* About Section */}
-                <section id="home" className="mb-12 relative">
+                <section id="about" className="mb-12 relative">
                     <div
                         className="bg-purple-800 p-6 rounded-lg border-2 border-cyan-400 shadow-lg transform transition-transform hover:scale-[1.01]">
                         <h2 className="text-2xl font-bold mb-4 text-cyan-400 flex items-center">
@@ -187,15 +191,22 @@ const PixelPortfolio: React.FC = () => {
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className="md:w-2/3">
                                 <p className="mb-4">
-                                    Welcome to my pixel dev world! I'm a backend wizard specializing in
-                                    .NET development with some React skills on the side. My code is
+                                    Welcome to my pixel dev world! I'm a Backend Engineer specializing in
+                                    &nbsp;<b className="text-purple-400 text-xl">
+                                    .NET
+                                </b>&nbsp;
+                                    development with some
+
+                                    &nbsp;<b className="text-blue-300 text-lg">
+                                    React
+                                </b>&nbsp; skills on the side. My code is
                                     clean, efficient, and battle-tested - just like the best retro
                                     games!
                                 </p>
                                 <p className="mb-4">
                                     When I'm not coding, I'm immersed in the world of indie games, vtubers, and anime.
-                                    This passion for digital creativity inspires my development approach and aesthetic
-                                    sensibilities.
+                                    I also hit the gym - my current max bench press is 75kg. These passions fuel my approach to development
+                                    and influence the aesthetic style I bring to every project.
                                 </p>
 
                                 <div className="flex flex-wrap gap-3 mb-5 mt-4 ">
@@ -218,6 +229,7 @@ const PixelPortfolio: React.FC = () => {
                                         className="w-full h-full bg-purple-800 border-4 border-cyan-400 rounded-lg flex items-center justify-center overflow-hidden shadow-[0_0_25px_#22d3ee] animate-glowSlow">
                                         <img src={roaImg} alt="👾" className="w-full h-full object-cover rounded-lg"/>
                                     </div>
+                                    <br/>
 
                                     {/* Pixel Corners with glow ping */}
                                     <div
@@ -257,20 +269,18 @@ const PixelPortfolio: React.FC = () => {
                         </div>
                     </div>
                 </section>
-
+                <p className="text-xl text-right italic text-cyan-300 mt-6">
+                    — Roern Chamreun // ROA 👾
+                </p>
                 {/* Skills Section */}
                 <section id="skills" className="mb-12">
-                    <h2 className="text-2xl font-bold mb-6 text-cyan-400 flex items-center">
-                        <Cpu className="mr-2"/> TECH_SKILLS
-                    </h2>
-
                     {/* Technical Skills */}
                     <div className="mb-8">
                         <h3 className="text-xl font-bold mb-4 text-pink-500 flex items-center">
                             <Server className="mr-2"/> TECHNICAL_SKILLS
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <SkillItem name=".NET Core" level={95} color="green-400" icon={<SiDotnet/>}/>
+                            <SkillItem name=".NET Core" level={95} color="purple-400" icon={<SiDotnet/>}/>
                             <SkillItem name="SQL Server" level={90} color="pink-500" icon={<DiMsqlServer/>}/>
                             <SkillItem name="Redis" level={85} color="red-400" icon={<SiRedis/>}/>
                             <SkillItem name="Elastic Search" level={80} color="yellow-400" icon={<SiElasticsearch/>}/>

@@ -38,7 +38,7 @@
 );
 
  const PixelHeart = () => (
-    <div className="absolute top-16 left-98 w-12 h-12 animate-pixel-pulse">
+    <div className="absolute top-16 left-102 w-12 h-12 animate-pixel-pulse">
         <svg viewBox="0 0 24 24" fill="currentColor" className="text-red-500">
             <path
                 d="M6,6 h2 v2 h2 v2 h4 v-2 h2 v-2 h2 v2 h2 v2 h2 v4 h-2 v2 h-2 v2 h-2 v2 h-4 v-2 h-2 v-2 h-2 v-2 h-2 v-4 h2 v-2 h2 z"/>
@@ -93,7 +93,7 @@
 
 
  const PixelPotion = () => (
-    <div className="absolute top-40 right-12 w-10 h-12 animate-bounce">
+    <div className="absolute top-40 right-50 w-10 h-12 animate-bounce">
         <svg viewBox="0 0 20 24" fill="currentColor" className="text-pink-400">
             <path d="M6,2 h8 v4 h-2 v2 h-4 v-2 h-2 z M4,8 h12 v10 h-2 v2 h-8 v-2 h-2 z M8,12 h4 v4 h-4 z"/>
         </svg>
