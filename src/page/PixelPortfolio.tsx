@@ -6,7 +6,7 @@ import {TechIcon} from "../components/TechIcon";
 import {PixelBlock} from "../components/PixelBlock";
 import {FaDocker, FaGithub, FaLinkedin, FaReact, FaServer} from 'react-icons/fa';
 import {SiDotnet, SiElasticsearch, SiRedis, SiShadcnui, SiTailwindcss, SiTypescript} from 'react-icons/si';
-import {Brain, Code, Coffee, Cpu, Gamepad, Heart, Mail, Server, Star, Users} from 'lucide-react';
+import {Brain, Code, Coffee, Gamepad, Heart, Mail, Server, Star, Users} from 'lucide-react';
 import {DiMsqlServer, DiRedis} from "react-icons/di";
 import {RetroGameDecorations} from "../components/RetroGameDecorations.tsx";
 import {VscAzure} from "react-icons/vsc";
@@ -41,8 +41,6 @@ const PixelPortfolio: React.FC = () => {
 
     return (
         <div className="bg-purple-900 text-gray-100 min-h-screen font-mono">
-            {/* Pixel Art Header */}
-            {/* Completely Redesigned Pixel Art Header */}
             <header
                 className="relative bg-gradient-to-b from-purple-950 to-purple-900 overflow-hidden border-b-4 border-cyan-400">
                 {/* Animated Pixel Background */}
@@ -52,7 +50,6 @@ const PixelPortfolio: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Grid Lines Overlay */}
                 <div className="absolute inset-0 grid grid-cols-12 opacity-10">
                     {[...Array(12)].map((_, i) => (
                         <div key={i} className="border-r border-cyan-400 h-full"></div>
@@ -60,21 +57,17 @@ const PixelPortfolio: React.FC = () => {
                 </div>
 
                 <div className="relative container mx-auto py-8 px-4">
-                    {/* Main Header Content */}
                     <div className="flex flex-col items-center">
-                        {/* Title Section with Pixel Frame */}
                         <div className="relative mb-8 px-6 py-3">
-                            {/* Pixel Frame */}
-                            <div className="absolute -top-2 -left-2 w-4 h-4 bg-pink-500"></div>
-                            <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-500"></div>
-                            <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-pink-500"></div>
-                            <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-pink-500"></div>
+                            <div className="absolute -top-2 -left-2 w-4 h-4 bg-green-400 animate-glow"></div>
+                            <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-300 animate-glow"></div>
+                            <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-400 animate-glow"></div>
+                            <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-red-400 animate-glow"></div>
                             <div className="absolute top-0 left-2 right-2 h-0.5 bg-pink-500"></div>
                             <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-pink-500"></div>
                             <div className="absolute left-0 top-2 bottom-2 w-0.5 bg-pink-500"></div>
                             <div className="absolute right-0 top-2 bottom-2 w-0.5 bg-pink-500"></div>
 
-                            {/* Title */}
                             <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 animate-glow">ROA-THE-DEV</h1>
                             <p className="text-pink-500 font-bold text-2xl text-center animate-glow">.NET Backend
                                 Engineer</p>
@@ -457,7 +450,7 @@ const PixelPortfolio: React.FC = () => {
                                     <ul className="space-y-4">
                                         <li className="flex items-center">
                                             <FaGithub className="mr-3 text-pink-500"/>
-                                            <span>github.com/dev-name</span>
+                                            <span>https://github.com/RoaTheDev</span>
                                         </li>
                                         <li className="flex items-center">
                                             <FaLinkedin className="mr-3 text-pink-500"/>
@@ -512,7 +505,7 @@ const PixelPortfolio: React.FC = () => {
                                 href="#"
                                 className="text-gray-300 hover:text-pink-500 transition-colors duration-300"
                             >
-                                <FaGithub size={24}/>
+                                <FaGithub size={24}>Link</FaGithub>
                             </a>
                             <a
                                 href="#"
