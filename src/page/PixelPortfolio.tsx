@@ -142,16 +142,6 @@ const PixelPortfolio: React.FC = () => {
                     {/* Floating Pixel Decorations */}
 
                     <RetroGameDecorations/>
-                    <div className="absolute top-45 left-80 w-10 h-10 animate-float" style={{animationDelay: "0.6s"}}>
-                        <svg viewBox="0 0 24 24" fill="currentColor" className="text-yellow-400">
-                            <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/>
-                        </svg>
-                    </div>
-                    <div className="absolute bottom-4 left-8 w-4 h-4 bg-cyan-400 animate-pulse"></div>
-                    <div className="absolute top-8 right-8 w-4 h-4 bg-pink-500 animate-pulse"
-                         style={{animationDelay: "0.5s"}}></div>
-                    <div className="absolute bottom-12 right-12 w-3 h-3 bg-purple-400 animate-pulse"
-                         style={{animationDelay: "1s"}}></div>
                 </div>
 
 
