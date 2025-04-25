@@ -6,10 +6,11 @@ import {TechIcon} from "../components/TechIcon";
 import {PixelBlock} from "../components/PixelBlock";
 import {FaDocker, FaGithub, FaLinkedin, FaReact, FaServer} from 'react-icons/fa';
 import {SiDotnet, SiElasticsearch, SiRedis, SiShadcnui, SiTailwindcss, SiTypescript} from 'react-icons/si';
-import {Brain, Code, Coffee, Gamepad, Heart, Link, Mail, Server, Star, Users} from 'lucide-react';
+import {Brain, Code, Coffee, Gamepad, Heart, Mail, Server, Star, Users} from 'lucide-react';
 import {DiMsqlServer, DiRedis} from "react-icons/di";
 import {RetroGameDecorations} from "../components/RetroGameDecorations.tsx";
 import {VscAzure} from "react-icons/vsc";
+import {AiFillYoutube} from "react-icons/ai";
 
 const PixelPortfolio: React.FC = () => {
     const [, setIsAnimating] = useState(false);
@@ -198,7 +199,8 @@ const PixelPortfolio: React.FC = () => {
                                 </p>
                                 <p className="mb-4">
                                     When I'm not coding, I'm immersed in the world of indie games, vtubers, and anime.
-                                    I also hit the gym - my current max bench press is 75kg. These passions fuel my approach to development
+                                    I also hit the gym - my current max bench press is 75kg. These passions fuel my
+                                    approach to development
                                     and influence the aesthetic style I bring to every project.
                                 </p>
 
@@ -449,12 +451,22 @@ const PixelPortfolio: React.FC = () => {
                                     <h3 className="text-xl font-bold mb-4 text-cyan-400">CONNECT_WITH_ME</h3>
                                     <ul className="space-y-4">
                                         <li className="flex items-center">
-                                            <FaGithub className="mr-3 text-pink-500"/>
+                                            <a href="https://github.com/RoaTheDev">
+                                                <FaGithub className="mr-3 text-pink-500 text-xl"/>
+                                            </a>
                                             <span>https://github.com/RoaTheDev</span>
                                         </li>
                                         <li className="flex items-center">
-                                            <FaLinkedin className="mr-3 text-pink-500"/>
-                                            <span>https://www.linkedin.com/in/chamreun-roern</span>
+                                            <a href="https://www.linkedin.com/in/chamreun-roern-2b36b72a7/">
+                                                <FaLinkedin className="mr-3 text-pink-500 text-xl"/>
+                                            </a>
+                                            <span>https://www.linkedin.com/in/chamreun-roern-2b36b72a7</span>
+                                        </li>
+                                        <li className="flex items-center">
+                                            <a href="https://www.youtube.com/@RoaSimpleCode15">
+                                                <AiFillYoutube className="mr-3 text-pink-500 text-2xl"/>
+                                            </a>
+                                            <span>https://www.youtube.com/@RoaSimpleCode15</span>
                                         </li>
                                         <li className="flex items-center">
                                             <Mail className="mr-3 text-pink-500"/>
@@ -511,6 +523,10 @@ const PixelPortfolio: React.FC = () => {
                                 className="text-gray-300 hover:text-pink-500 transition-colors duration-300"
                             >
                                 <FaLinkedin size={24}/>
+                            </a>
+                            <a href="https://www.youtube.com/@RoaSimpleCode15"
+                               className="text-gray-300 hover:text-pink-500 transition-colors duration-300">
+                                <AiFillYoutube size={24}/>
                             </a>
                             <a
                                 href="#"
