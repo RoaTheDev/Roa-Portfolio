@@ -6,7 +6,7 @@ import {TechIcon} from "../components/TechIcon";
 import {PixelBlock} from "../components/PixelBlock";
 import {FaDocker, FaGithub, FaLinkedin, FaReact, FaServer} from 'react-icons/fa';
 import {SiDotnet, SiElasticsearch, SiRedis, SiShadcnui, SiTailwindcss, SiTypescript} from 'react-icons/si';
-import {Brain, Code, Coffee, Gamepad, Heart, Mail, Server, Star, Users} from 'lucide-react';
+import {Brain, Code, Coffee, Gamepad, Heart, Link, Mail, Server, Star, Users} from 'lucide-react';
 import {DiMsqlServer, DiRedis} from "react-icons/di";
 import {RetroGameDecorations} from "../components/RetroGameDecorations.tsx";
 import {VscAzure} from "react-icons/vsc";
@@ -454,11 +454,11 @@ const PixelPortfolio: React.FC = () => {
                                         </li>
                                         <li className="flex items-center">
                                             <FaLinkedin className="mr-3 text-pink-500"/>
-                                            <span>linkedin.com/in/dev-name</span>
+                                            <span>https://www.linkedin.com/in/chamreun-roern</span>
                                         </li>
                                         <li className="flex items-center">
                                             <Mail className="mr-3 text-pink-500"/>
-                                            <span>dev@email.com</span>
+                                            <span>itmeroa15@gmail.com</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -499,16 +499,15 @@ const PixelPortfolio: React.FC = () => {
                             <p className="text-sm">© 2025 ROA-THE-DEV | All rights reserved</p>
                             <p className="text-xs text-gray-400">Made with pixel love 👾</p>
                         </div>
-
                         <div className="flex space-x-4">
                             <a
-                                href="#"
+                                href="https://github.com/RoaTheDev/"
                                 className="text-gray-300 hover:text-pink-500 transition-colors duration-300"
                             >
                                 <FaGithub size={24}>Link</FaGithub>
                             </a>
                             <a
-                                href="#"
+                                href="https://www.linkedin.com/in/chamreun-roern-2b36b72a7/"
                                 className="text-gray-300 hover:text-pink-500 transition-colors duration-300"
                             >
                                 <FaLinkedin size={24}/>
