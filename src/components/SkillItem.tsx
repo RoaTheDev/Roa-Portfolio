@@ -91,7 +91,7 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
             className={`bg-purple-800 p-4 rounded-lg border-2 ${getBorderClass()} transition-all duration-300 transform hover:scale-105`}
         >
             <h3 className={`text-xl font-bold ${getTextClass()} mb-2 flex items-center`}>
-                <span className="mr-2">{icon}</span> {name}
+                <span className="mr-2 text-3xl">{icon}</span> {name}
             </h3>
             <div className="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
                 <div

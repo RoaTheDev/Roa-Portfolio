@@ -10,7 +10,7 @@ interface TechIconProps {
 export const TechIcon: React.FC<TechIconProps> = ({icon, label, category = 'other'}) => {
     const [isHovered, setIsHovered] = useState(false);
 
-    // Define category-based colors
+
     const getCategoryColor = () => {
         switch(category) {
             case 'backend':
@@ -28,10 +28,10 @@ export const TechIcon: React.FC<TechIconProps> = ({icon, label, category = 'othe
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div className={`text-2xl mb-1 transition-transform duration-300 ${isHovered ? 'scale-125' : ''}`}>
+            <div className={`text-3xl mb-1 transition-transform duration-500 ${isHovered ? 'scale-125' : ''}`}>
                 {icon}
             </div>
-            <span className={`text-xl ${getCategoryColor()}`}>{label}</span>
+            <span className={`text-lg ${getCategoryColor()}`}>{label}</span>
         </div>
     );
 };

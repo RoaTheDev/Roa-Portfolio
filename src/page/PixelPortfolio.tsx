@@ -1,22 +1,24 @@
-import {SkillItem} from "../components/SkillItem";
 import roaImg from '../assets/roa.jpg';
 import * as React from 'react';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {TechIcon} from "../components/TechIcon";
 import {PixelBlock} from "../components/PixelBlock";
 import {FaDocker, FaGithub, FaLinkedin, FaReact, FaServer} from 'react-icons/fa';
-import {SiDotnet, SiElasticsearch, SiRedis, SiShadcnui, SiTailwindcss, SiTypescript} from 'react-icons/si';
-import {Brain, Code, Coffee, Gamepad, Heart, Mail, Server, Star, Users} from 'lucide-react';
-import {DiMsqlServer, DiRedis} from "react-icons/di";
+import {SiDotnet, SiJavascript, SiTailwindcss, SiTypescript} from 'react-icons/si';
+import {Code, Gamepad, Mail, Server} from 'lucide-react';
+import {DiCss3, DiDotnet, DiHtml5, DiMsqlServer, DiRedis} from "react-icons/di";
 import {RetroGameDecorations} from "../components/RetroGameDecorations.tsx";
-import {VscAzure} from "react-icons/vsc";
 import {AiFillYoutube} from "react-icons/ai";
+import {UnderConstructionPopup} from "../components/UnderConstructionPopUp.tsx";
+import {Navbar} from "../components/Navbar.tsx";
+import {TbBrandCSharp} from "react-icons/tb";
+import {SkillSection} from "../components/SkillSection.tsx";
 
 const PixelPortfolio: React.FC = () => {
-    const [, setIsAnimating] = useState(false);
-    const [hoverNav, setHoverNav] = useState<string | null>(null);
+    const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
 
-    // Generate random pixels for background effect
+    const openPopup = (): void => setIsPopupOpen(true);
+    const closePopup = (): void => setIsPopupOpen(false);
     const generateRandomPixels = (count: number) => {
         const pixels = [];
         for (let i = 0; i < count; i++) {
@@ -31,17 +33,13 @@ const PixelPortfolio: React.FC = () => {
 
     const backgroundPixels = generateRandomPixels(50);
 
-    // Pixel character animation effect
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsAnimating((prev) => !prev);
-        }, 500);
-        return () => clearInterval(interval);
-    }, []);
-
 
     return (
+
         <div className="bg-purple-900 text-gray-100 min-h-screen font-mono">
+            {/* Navigation */}
+            <Navbar/>
+
             <header
                 className="relative bg-gradient-to-b from-purple-950 to-purple-900 overflow-hidden border-b-4 border-cyan-400">
                 {/* Animated Pixel Background */}
@@ -70,7 +68,7 @@ const PixelPortfolio: React.FC = () => {
                             <div className="absolute right-0 top-2 bottom-2 w-0.5 bg-pink-500"></div>
 
                             <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 animate-glow">ROA-THE-DEV</h1>
-                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow">.NET Backend
+                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow">.NET FullStack
                                 Engineer</p>
                         </div>
 
@@ -102,16 +100,16 @@ const PixelPortfolio: React.FC = () => {
                                         <Server className="mr-2" size={20}/> Backend
                                     </h3>
                                     <div className="grid grid-cols-3 md:grid-cols-5 gap-3 justify-items-center">
-                                        <TechIcon icon={<SiDotnet className="text-purple-400 text-3xl"/>} label=".NET"
+                                        <TechIcon icon={<TbBrandCSharp className="text-purple-500 text-3xl"/>}
+                                                  label="C#"
+                                                  category="backend"/>
+                                        <TechIcon icon={<DiDotnet className="text-blue-300 text-3xl"/>}
+                                                  label="Asp.Net Core"
                                                   category="backend"/>
                                         <TechIcon icon={<DiMsqlServer className="text-white text-3xl"/>} label="MSSQL"
                                                   category="backend"/>
-                                        <TechIcon icon={<VscAzure className="text-blue-400 text-3xl"/>} label="Azure"
-                                                  category="backend"/>
                                         <TechIcon icon={<DiRedis className="text-red-500 text-3xl"/>} label="Redis"
                                                   category="backend"/>
-                                        <TechIcon icon={<SiElasticsearch className="text-yellow-300 text-3xl"/>}
-                                                  label="ELK" category="backend"/>
                                         <TechIcon icon={<FaDocker className="text-blue-400 text-3xl"/>} label="Docker"
                                                   category="backend"/>
                                     </div>
@@ -123,14 +121,21 @@ const PixelPortfolio: React.FC = () => {
                                         <Code className="mr-2" size={20}/> Frontend
                                     </h3>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 justify-items-center">
-                                        <TechIcon icon={<FaReact className="text-blue-300 text-3xl"/>} label="React"
+                                        <TechIcon icon={<DiHtml5 className="text-red-400 "/>} label="Html"
                                                   category="frontend"/>
-                                        <TechIcon icon={<SiTypescript className="text-blue-500 text-3xl"/>} label="TS"
+
+                                        <TechIcon icon={<DiCss3 className="text-blue-500 "/>} label="CSS"
                                                   category="frontend"/>
-                                        <TechIcon icon={<SiTailwindcss className="text-blue-500 text-3xl"/>}
+                                        <TechIcon icon={<SiJavascript className="text-yellow-300 "/>} label="TS"
+                                                  category="frontend"/>
+                                        <TechIcon icon={<SiTypescript className="text-blue-500 "/>} label="TS"
+                                                  category="frontend"/>
+                                        <TechIcon icon={<FaReact className="text-blue-400 "/>} label="React"
+                                                  category="frontend"/>
+                                        <TechIcon icon={<SiTailwindcss className="text-blue-500 "/>}
                                                   label="Tailwind" category="frontend"/>
-                                        <TechIcon icon={<SiShadcnui className="text-cyan-50 text-3xl"/>} label="Shadcn"
-                                                  category="frontend"/>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -138,43 +143,17 @@ const PixelPortfolio: React.FC = () => {
                     </div>
 
                     {/* Floating Pixel Decorations */}
-
                     <RetroGameDecorations/>
                 </div>
 
 
             </header>
 
-            {/* Navigation */}
-            <nav className="bg-gray-900 border-b-4 border-pink-500 sticky top-0 z-50">
-                <div className="container mx-auto px-4">
-                    <ul className="flex flex-wrap justify-center md:justify-start space-x-1 md:space-x-4">
-                        {[
-                            {label: 'HOME', id: 'home'},
-                            {label: 'PROJECTS', id: 'projects'},
-                            {label: 'SKILLS', id: 'skills'},
-                            {label: 'ABOUT', id: 'about'},
-                            {label: 'CONTACT', id: 'contact'}
-                        ].map((item, index) => (
-                            <li
-                                key={item.id}
-                                className={`py-3 px-4 cursor-pointer transition-colors duration-300 
-                  ${index < 4 ? 'border-r-2 border-purple-700' : ''}
-                  ${hoverNav === item.id ? 'bg-pink-500' : 'hover:bg-pink-500'}`}
-                                onMouseEnter={() => setHoverNav(item.id)}
-                                onMouseLeave={() => setHoverNav(null)}
-                                onClick={() => document.getElementById(item.id)?.scrollIntoView({behavior: 'smooth'})}
-                            >
-                                {item.label}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </nav>
 
             {/* Main Content */}
             <main className="container mx-auto px-4 py-8">
                 {/* About Section */}
+                <section id="#"></section>
                 <section id="about" className="mb-12 relative">
                     <div
                         className="bg-purple-800 p-6 rounded-lg border-2 border-cyan-400 shadow-lg transform transition-transform hover:scale-[1.01]">
@@ -185,7 +164,7 @@ const PixelPortfolio: React.FC = () => {
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className="md:w-2/3">
                                 <p className="mb-4">
-                                    Welcome to my pixel dev world! I'm a Backend Engineer specializing in
+                                    Welcome to my pixel dev world! I'm a Fullstack Engineer specializing in
                                     &nbsp;<b className="text-purple-400 text-xl">
                                     .NET
                                 </b>&nbsp;
@@ -193,7 +172,7 @@ const PixelPortfolio: React.FC = () => {
 
                                     &nbsp;<b className="text-blue-300 text-lg">
                                     React
-                                </b>&nbsp; skills on the side. My code is
+                                </b>&nbsp;based skills on the side. My code is
                                     clean, efficient, and battle-tested - just like the best retro
                                     games!
                                 </p>
@@ -206,8 +185,8 @@ const PixelPortfolio: React.FC = () => {
 
                                 <div className="flex flex-wrap gap-3 mb-5 mt-4 ">
 
-                                    <button
-                                        className="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded transition-colors duration-300 flex items-center">
+                                    <button onClick={openPopup}
+                                            className="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded transition-colors duration-300 flex items-center">
                                         <span className="mr-2">⬇️</span> DOWNLOAD_CV.exe
                                     </button>
                                     <button
@@ -238,29 +217,6 @@ const PixelPortfolio: React.FC = () => {
                                 </div>
                             </div>
 
-
-                            {/*<div className="md:w-1/3 flex items-center justify-center">*/}
-                            {/*    <div className="w-40 h-40 relative">*/}
-                            {/*        /!* Pixel art representation of interests *!/*/}
-                            {/*        <div className="absolute inset-0 grid grid-cols-8 grid-rows-8">*/}
-                            {/*            {[...Array(64)].map((_, i) => (*/}
-                            {/*                <div*/}
-                            {/*                    key={i}*/}
-                            {/*                    className="border border-purple-900"*/}
-                            {/*                    style={{*/}
-                            {/*                        backgroundColor: [12, 13, 20, 21, 28, 29, 36, 37].includes(i)*/}
-                            {/*                            ? '#F472B6' // Pink for gaming controller*/}
-                            {/*                            : [22, 23, 30, 31, 38, 39, 46, 47].includes(i)*/}
-                            {/*                                ? '#00E0FF' // Cyan for anime/vtuber representation*/}
-                            {/*                                : [41, 42, 43, 44, 49, 50, 51, 52].includes(i)*/}
-                            {/*                                    ? '#10B981' // Green for code representation*/}
-                            {/*                                    : 'transparent',*/}
-                            {/*                    }}*/}
-                            {/*                />*/}
-                            {/*            ))}*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                 </section>
@@ -268,37 +224,7 @@ const PixelPortfolio: React.FC = () => {
                     — Roern Chamreun // ROA 👾
                 </p>
                 {/* Skills Section */}
-                <section id="skills" className="mb-12">
-                    {/* Technical Skills */}
-                    <div className="mb-8">
-                        <h3 className="text-xl font-bold mb-4 text-pink-500 flex items-center">
-                            <Server className="mr-2"/> TECHNICAL_SKILLS
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <SkillItem name=".NET Core" level={95} color="purple-400" icon={<SiDotnet/>}/>
-                            <SkillItem name="SQL Server" level={90} color="pink-500" icon={<DiMsqlServer/>}/>
-                            <SkillItem name="Redis" level={85} color="red-400" icon={<SiRedis/>}/>
-                            <SkillItem name="Elastic Search" level={80} color="yellow-400" icon={<SiElasticsearch/>}/>
-                            <SkillItem name="Docker" level={75} color="blue-500" icon={<FaDocker/>}/>
-                            <SkillItem name="React" level={60} color="pink-500" icon={<FaReact/>}/>
-                        </div>
-                    </div>
-
-                    {/* Soft Skills */}
-                    <div>
-                        <h3 className="text-xl font-bold mb-4 text-pink-500 flex items-center">
-                            <Users className="mr-2"/> SOFT_SKILLS
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <SkillItem name="Problem Solving" level={92} color="purple-400" icon={<Brain/>}/>
-                            <SkillItem name="Teamwork" level={88} color="blue-400" icon={<Users/>}/>
-                            <SkillItem name="Communication" level={85} color="cyan-400" icon={<Mail/>}/>
-                            <SkillItem name="Attention to Detail" level={90} color="yellow-400" icon={<Star/>}/>
-                            <SkillItem name="Adaptability" level={87} color="green-400" icon={<Coffee/>}/>
-                            <SkillItem name="Passion" level={99} color="red-400" icon={<Heart/>}/>
-                        </div>
-                    </div>
-                </section>
+               <SkillSection/>
 
                 {/* Projects Section Preview */}
                 <section id="projects" className="mb-12">
@@ -439,8 +365,11 @@ const PixelPortfolio: React.FC = () => {
                                         ></textarea>
                                     </div>
                                     <div>
-                                        <button
-                                            className="bg-pink-500 hover:bg-pink-600 px-6 py-2 rounded transition-colors duration-300 w-full md:w-auto">
+                                        <button onClick={(e) => {
+                                            e.preventDefault()
+                                            openPopup();
+                                        }}
+                                                className="bg-pink-500 hover:bg-pink-600 px-6 py-2 rounded transition-colors duration-300 w-full md:w-auto">
                                             {"SEND >_"}
                                         </button>
                                     </div>
@@ -449,30 +378,7 @@ const PixelPortfolio: React.FC = () => {
                             <div className="flex flex-col justify-between">
                                 <div>
                                     <h3 className="text-xl font-bold mb-4 text-cyan-400">CONNECT_WITH_ME</h3>
-                                    <ul className="space-y-4">
-                                        <li className="flex items-center">
-                                            <a href="https://github.com/RoaTheDev">
-                                                <FaGithub className="mr-3 text-pink-500 text-xl"/>
-                                            </a>
-                                            <span>https://github.com/RoaTheDev</span>
-                                        </li>
-                                        <li className="flex items-center">
-                                            <a href="https://www.linkedin.com/in/chamreun-roern-2b36b72a7/">
-                                                <FaLinkedin className="mr-3 text-pink-500 text-xl"/>
-                                            </a>
-                                            <span>https://www.linkedin.com/in/chamreun-roern-2b36b72a7</span>
-                                        </li>
-                                        <li className="flex items-center">
-                                            <a href="https://www.youtube.com/@RoaSimpleCode15">
-                                                <AiFillYoutube className="mr-3 text-pink-500 text-2xl"/>
-                                            </a>
-                                            <span>https://www.youtube.com/@RoaSimpleCode15</span>
-                                        </li>
-                                        <li className="flex items-center">
-                                            <Mail className="mr-3 text-pink-500"/>
-                                            <span>itmeroa15@gmail.com</span>
-                                        </li>
-                                    </ul>
+
                                 </div>
                                 <div className="mt-6 md:mt-0">
                                     <div className="text-center md:text-right">
@@ -493,7 +399,7 @@ const PixelPortfolio: React.FC = () => {
             <footer className="bg-gray-900 border-t-4 border-cyan-400 py-6 relative">
                 {/* Floating pixel character */}
                 <div
-                    className="absolute right-10 bottom-8 w-8 h-8 animate-bounce"
+                    className="absolute left-100 bottom-8 w-8 h-8 animate-bounce"
                     style={{
                         animationDuration: '2s',
                     }}
@@ -528,17 +434,18 @@ const PixelPortfolio: React.FC = () => {
                                className="text-gray-300 hover:text-pink-500 transition-colors duration-300">
                                 <AiFillYoutube size={24}/>
                             </a>
-                            <a
-                                href="#"
-                                className="text-gray-300 hover:text-pink-500 transition-colors duration-300"
-                            >
-                                <Mail size={24}/>
-                            </a>
+
                         </div>
                     </div>
                 </div>
             </footer>
+            {isPopupOpen && <UnderConstructionPopup
+                isOpen={isPopupOpen}
+                onClose={closePopup}
+                title="FEATURE_COMING_SOON"
+            />}
         </div>
+
     );
 };
 

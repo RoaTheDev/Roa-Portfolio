@@ -35,11 +35,11 @@
     @keyframes pixel-pulse {
         0%, 100% { transform: scale(1); opacity: 1; }
         33% { transform: scale(1.05); opacity: 1; }
-        66% { transform: scale(0.95); opacity: 0.8; }
+        66% { transform: scale(0.95); opacity: 0.9; }
     }
 
     .animate-pixel-pulse {
-        animation: pixel-pulse 1.2s steps(3) infinite;
+        animation: pixel-pulse 1s steps(3) infinite;
     }
 
     /* Power-up animation with pixel-art style steps */
