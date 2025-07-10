@@ -1,6 +1,6 @@
 import {Brain, Coffee, Heart, Mail, Server, Star, Users} from "lucide-react";
 import {SkillItem} from "./SkillItem.tsx";
-import {SiDotnet, SiJavascript, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {SiDotnet, SiJavascript, SiSpring, SiTailwindcss, SiTypescript} from "react-icons/si";
 import {DiCss3, DiHtml5, DiMsqlServer, DiRedis} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
 
@@ -14,14 +14,14 @@ export const SkillSection = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <SkillItem name=" (C# & ASP.NET Core)" level={95} color="purple-400" icon={<SiDotnet/>}/>
+                    <SkillItem name=" Java & Spring" level={75} color="green-400" icon={<SiSpring/>}/>
                     <SkillItem name="SQL Server" level={90} color="pink-500" icon={<DiMsqlServer/>}/>
                     <SkillItem name="Redis" level={85} color="red-400" icon={<DiRedis/>}/>
-                    <SkillItem name="Html" level={90} color="red-400" icon={<DiHtml5/>}/>
-                    <SkillItem name="CSS" level={69} color="blue-500" icon={<DiCss3/>}/>
-                    <SkillItem name="Javascript" level={80} color="yellow-400" icon={<SiJavascript/>}/>
-                    <SkillItem name="Typescript" level={85} color="blue-500" icon={<SiTypescript/>}/>
-                    <SkillItem name="Tailwind" level={75} color="blue-500" icon={<SiTailwindcss/>}/>
                     <SkillItem name="React" level={90} color="blue-400" icon={<FaReact/>}/>
+                    <SkillItem name="Javascript" level={80} color="yellow-400" icon={<SiJavascript/>}/>
+                    <SkillItem name="Typescript" level={85} color="blue-400" icon={<SiTypescript/>}/>
+                    <SkillItem name="Tailwind" level={75} color="blue-400" icon={<SiTailwindcss/>}/>
+                    <SkillItem name="HTML/CSS" level={90} color="red-400" icon={<div className={"flex"}><DiHtml5/> <DiCss3 /></div>}/>
                 </div>
             </div>
 
