@@ -51,7 +51,7 @@ export const Hero = () => {
                             <div className="absolute right-0 top-2 bottom-2 w-0.5 bg-pink-500"></div>
 
                             <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 animate-glow">ROA-THE-DEV</h1>
-                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow">Fullstack Developer</p>
+                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow"> Fullstack Developer</p>
                         </div>
 
                         {/* Developer Avatar and Character */}

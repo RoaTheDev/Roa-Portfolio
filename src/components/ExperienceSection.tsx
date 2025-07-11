@@ -62,6 +62,7 @@ export const ExperienceSection: React.FC = () => {
                 "Collaborated with supervisors to implement user-requested features.",
             ],
         },
+        
     ];
 
     const freelanceQuest: FreelanceExperience = {
@@ -125,7 +126,6 @@ export const ExperienceSection: React.FC = () => {
         }
     };
 
-    // ===== RENDER =====
     return (
         <section id="experience" className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-cyan-400 flex items-center">
@@ -167,13 +167,7 @@ export const ExperienceSection: React.FC = () => {
                                 </div>
 
                                 {/* Experience Card */}
-                                <div
-                                    className={`flex ${
-                                        index % 2 === 0
-                                            ? "md:flex-row"
-                                            : "md:flex-row-reverse"
-                                    } items-center gap-8`}
-                                >
+                                <div className={`flex ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} items-center gap-8`}>
                                     <div className="flex-1">
                                         <div className={index % 2 === 0 ? "md:pr-8" : "md:pl-8"}>
                                             <ExperienceCard exp={exp} isMainPath />

@@ -21,7 +21,7 @@ const PixelCloud = () => (
 );
 
  const PixelCoin = () => (
-    <div className="absolute bottom-20 left-52 w-10 h-10 animate-spin-slow">
+    <div className="absolute bottom-20 left-44 w-10 h-10 animate-spin-slow">
         <svg viewBox="0 0 24 24" className="text-yellow-400">
             <g fill="currentColor">
                 <rect x="8" y="4" width="8" height="2"/>
@@ -38,7 +38,7 @@ const PixelCloud = () => (
 );
 
  const PixelHeart = () => (
-    <div className="absolute top-16 left-102 w-12 h-12 animate-pixel-pulse">
+    <div className="absolute top-18 left-10 w-12 h-12 animate-pixel-pulse">
         <svg viewBox="0 0 24 24" fill="currentColor" className="text-red-500">
             <path
                 d="M6,6 h2 v2 h2 v2 h4 v-2 h2 v-2 h2 v2 h2 v2 h2 v4 h-2 v2 h-2 v2 h-2 v2 h-4 v-2 h-2 v-2 h-2 v-2 h-2 v-4 h2 v-2 h2 z"/>
@@ -56,7 +56,7 @@ const PixelCloud = () => (
 }
 
  const PixelSword = () => (
-    <div className="absolute bottom-12 right-16 w-12 h-12 animate-float">
+    <div className="absolute bottom-12 right-9 w-12 h-12 animate-float">
         <svg viewBox="0 0 24 24" fill="none" className="text-cyan-400">
             <g fill="currentColor">
                 <rect x="11" y="4" width="2" height="2"/>
@@ -104,7 +104,7 @@ const PixelCloud = () => (
 );
 
  const PixelChest = () => (
-    <div className="absolute top-50 right-24 w-16 h-12 animate-bounce delay-200">
+    <div className="absolute top-60 right-12 w-16 h-12 animate-bounce delay-200">
         <svg viewBox="0 0 32 24" fill="currentColor" className="text-amber-600">
             <path d="M4,6 h24 v12 h-24 z M4,10 h24 v2 h-24 z M14,12 h4 v4 h-4 z"/>
             <rect x="14" y="12" width="4" height="4" className="text-yellow-300"/>
@@ -123,7 +123,7 @@ const PixelCloud = () => (
 
 
  const PixelStar = () => {
-    return (<div className="absolute top-45 left-30 w-10 h-10 animate-float" style={{animationDelay: "0.6s"}}>
+    return (<div className="absolute top-90 left-8 w-10 h-10 animate-float" style={{animationDelay: "0.6s"}}>
         <svg viewBox="0 0 24 24" fill="currentColor" className="text-yellow-400">
             <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/>
         </svg>

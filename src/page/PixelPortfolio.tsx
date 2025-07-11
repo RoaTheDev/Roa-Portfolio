@@ -62,14 +62,13 @@ const PixelPortfolio: React.FC = () => {
                                 <div className="flex flex-wrap gap-3 mb-5 mt-4 ">
 
                                     <button onClick={() => {
-                                        const url = `${import.meta.env.BASE_URL}/resume.pdf`;
+                                        const url = `${import.meta.env.BASE_URL}/roa-resume.pdf`;
                                         const windowFeatures = "width=800,height=600,resizable=yes,scrollbars=yes";
                                         window.open(url, "PDFViewer", windowFeatures);
                                     }}
                                             className="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded transition-colors duration-300 flex items-center">
-                                        <span className="mr-2">⬇️</span> DOWNLOAD_CV.exe
+                                        <span className="mr-2">⬇️</span> VIEW_CV.exe
                                     </button>
-
                                 </div>
                             </div>
                             <div className="md:w-1/3 flex justify-center md:justify-end mr-4">
