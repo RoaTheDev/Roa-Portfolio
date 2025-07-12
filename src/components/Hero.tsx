@@ -2,9 +2,9 @@ import {Code, Server} from "lucide-react";
 import {PixelBlock} from "./PixelBlock.tsx";
 import {TechIcon} from "./TechIcon.tsx";
 import {TbBrandCSharp} from "react-icons/tb";
-import {DiCss3, DiDotnet, DiHtml5, DiJava, DiMsqlServer, DiRedis} from "react-icons/di";
+import {DiCss3, DiDotnet, DiHtml5, DiMsqlServer, DiRedis} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
-import {SiGit, SiGithub, SiJavascript, SiPostman, SiSpring, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {SiGit, SiGithub, SiJavascript, SiPostman, SiTailwindcss, SiTypescript} from "react-icons/si";
 import {RetroGameDecorations} from "./RetroGameDecorations.tsx";
 
 export const Hero = () => {
@@ -87,10 +87,6 @@ export const Hero = () => {
                                                   label="C#" category="backend"/>
                                         <TechIcon icon={<DiDotnet className="text-blue-300 text-3xl"/>}
                                                   label="ASP.NET Core" category="backend"/>
-                                        <TechIcon icon={<DiJava className="text-white text-3xl"/>}
-                                                  label="Java" category="backend"/>
-                                        <TechIcon icon={<SiSpring className="text-green-400 text-3xl"/>}
-                                                  label="Spring" category="backend"/>
                                         <TechIcon icon={<DiMsqlServer className="text-white text-3xl"/>}
                                                   label="MSSQL" category="backend"/>
                                         <TechIcon icon={<DiRedis className="text-red-500 text-3xl"/>}

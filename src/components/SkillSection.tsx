@@ -1,6 +1,6 @@
 import {Brain, Coffee, Heart, Mail, Server, Star, Users} from "lucide-react";
 import {SkillItem} from "./SkillItem.tsx";
-import {SiDotnet, SiGit, SiJavascript, SiSpring, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {SiDotnet, SiGit, SiJavascript, SiTailwindcss, SiTypescript} from "react-icons/si";
 import {DiCss3, DiHtml5, DiMsqlServer, DiRedis} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
 
@@ -14,7 +14,6 @@ export const SkillSection = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <SkillItem name=" (C# & ASP.NET Core)" level={85} color="purple-400" icon={<SiDotnet/>}/>
-                    <SkillItem name=" Java & Spring" level={65} color="green-400" icon={<SiSpring/>}/>
                     <SkillItem name="SQL Server" level={65} color="pink-500" icon={<DiMsqlServer/>}/>
                     <SkillItem name="Redis" level={60} color="red-400" icon={<DiRedis/>}/>
                     <SkillItem name="React" level={68} color="blue-400" icon={<FaReact/>}/>

@@ -36,16 +36,10 @@ const PixelPortfolio: React.FC = () => {
                             <div className="md:w-2/3">
                                 <p className="mb-4">
                                     Welcome to my pixel dev world! I'm a Fullstack Developer specializing in
-                                    &nbsp;<b className="text-purple-400 text-xl">
-                                    .NET
-                                </b>&nbsp;
-                                    who is also familiar with
-                                    &nbsp;
-                                    <b className="text-green-400 text-xl">
-                                        Spring
+                                    <b className="text-purple-400 text-xl">
+                                        .NET
                                     </b>&nbsp;
                                     development with some
-
                                     &nbsp;<b className="text-blue-300 text-lg">
                                     React
                                 </b>&nbsp;based skills on the side. My code is
@@ -62,7 +56,7 @@ const PixelPortfolio: React.FC = () => {
                                 <div className="flex flex-wrap gap-3 mb-5 mt-4 ">
 
                                     <button onClick={() => {
-                                        const url = `${import.meta.env.BASE_URL}/roa-resume.pdf`;
+                                        const url = `${import.meta.env.BASE_URL}/chamreun_cv.pdf`;
                                         const windowFeatures = "width=800,height=600,resizable=yes,scrollbars=yes";
                                         window.open(url, "PDFViewer", windowFeatures);
                                     }}
