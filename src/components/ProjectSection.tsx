@@ -1,10 +1,20 @@
 import {ExternalLink, Gamepad} from "lucide-react";
-import {SiDotnet, SiGithub, SiJsonwebtokens, SiPostgresql, SiSpring, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {
+    SiCloudinary,
+    SiDotnet,
+    SiGithub,
+    SiJsonwebtokens,
+    SiPostgresql,
+    SiSpring,
+    SiTailwindcss,
+    SiTypescript
+} from "react-icons/si";
 import {DiMsqlServer, DiRedis} from "react-icons/di";
 import {FaServer, FaYoutube} from "react-icons/fa";
 import springSecurityPng from '../assets/spring_security.png'
 import faunaMarket from '../assets/Fuana_market.png'
-import {TbBrandNextjs} from "react-icons/tb";
+import posSys from '../assets/POS_sys.png'
+import {TbBrandFirebase, TbBrandNextjs} from "react-icons/tb";
 
 export const ProjectSection = () => {
     const projects = [
@@ -44,6 +54,24 @@ export const ProjectSection = () => {
             sourceLinks: [
                 {name: "Backend", url: "https://github.com/RoaTheDev/Industry_Standard_Eccomerce_V1"},
                 {name: "Frontend", url: "https://github.com/RoaTheDev/Ecommerce_NextJS_V1_Frontend"}
+            ]
+        },
+        {
+            id: 3,
+            title: "POS System",
+            description: "Developed a PWA-based POS system with Firebase Auth, customer/product management, image uploads, printing, and currency\n" +
+                "conversion (USD, THB, KHR).",
+            image: posSys,
+            technologies: [
+                {name: "NextJS", icon: TbBrandNextjs, bgColor: "bg-black"},
+                {name: "Firebase", icon: TbBrandFirebase, bgColor: "bg-yellow-500"},
+                {name: "Cloudinary", icon: SiCloudinary, bgColor: "bg-blue-500"},
+                {name: "Typescript", icon: SiTypescript, bgColor: "bg-blue-500"},
+                {name: "Tailwindcss", icon: SiTailwindcss, bgColor: "bg-blue-500"},
+
+            ],
+            sourceLinks: [
+                {name: "Source code", url: "https://github.com/RoaTheDev/POS-System-NextJS"},
             ]
         },
 
