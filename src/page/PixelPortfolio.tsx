@@ -56,7 +56,7 @@ const PixelPortfolio: React.FC = () => {
                                 <div className="flex flex-wrap gap-3 mb-5 mt-4 ">
 
                                     <button onClick={() => {
-                                        const url = `${import.meta.env.BASE_URL}/Roern_Chamreun_CV.pdf`;
+                                        const url = `${import.meta.env.BASE_URL}/roern_chamreun_software_engineer_cv.pdf`;
                                         const windowFeatures = "width=800,height=600,resizable=yes,scrollbars=yes";
                                         window.open(url, "PDFViewer", windowFeatures);
                                     }}

@@ -42,7 +42,7 @@ type FreelanceExperience = Omit<Experience, "level">;
 export const ExperienceSection: React.FC = () => {
     const mainPath: Experience[] = [
         {
-            title: "Volunteer React Developer",
+            title: "React Developer (Internship)",
             company: "Cambodia Ministry Of Interior",
             location: "Phnom Penh, Cambodia",
             period: "2025 - Present",
@@ -62,7 +62,7 @@ export const ExperienceSection: React.FC = () => {
                 "Collaborated with supervisors to implement user-requested features.",
             ],
         },
-        
+
     ];
 
     const freelanceQuest: FreelanceExperience = {

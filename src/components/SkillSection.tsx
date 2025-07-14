@@ -1,7 +1,7 @@
 import {Brain, Coffee, Heart, Mail, Server, Star, Users} from "lucide-react";
 import {SkillItem} from "./SkillItem.tsx";
-import {SiDotnet, SiGit, SiJavascript, SiTailwindcss, SiTypescript} from "react-icons/si";
-import {DiCss3, DiHtml5, DiMsqlServer, DiRedis} from "react-icons/di";
+import {SiDotnet, SiGit, SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {DiCss3, DiHtml5, DiMsqlServer, DiPython, DiRedis} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
 
 export const SkillSection = () => {
@@ -16,7 +16,9 @@ export const SkillSection = () => {
                     <SkillItem name=" (C# & ASP.NET Core)" level={85} color="purple-400" icon={<SiDotnet/>}/>
                     <SkillItem name="SQL Server" level={65} color="pink-500" icon={<DiMsqlServer/>}/>
                     <SkillItem name="Redis" level={60} color="red-400" icon={<DiRedis/>}/>
+                    <SkillItem name="NextJS" level={70} color="gray-300" icon={<SiNextdotjs/>}/>
                     <SkillItem name="React" level={68} color="blue-400" icon={<FaReact/>}/>
+                    <SkillItem name="Python" level={65} color="yellow-400" icon={<DiPython/>}/>
                     <SkillItem name="Javascript" level={69} color="yellow-400" icon={<SiJavascript/>}/>
                     <SkillItem name="Typescript" level={65} color="blue-400" icon={<SiTypescript/>}/>
                     <SkillItem name="Tailwind" level={59} color="blue-400" icon={<SiTailwindcss/>}/>

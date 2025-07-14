@@ -20,23 +20,6 @@ export const ProjectSection = () => {
     const projects = [
         {
             id: 1,
-            title: "Spring Security via JWT With Redis",
-            description: "This is a custom implementation of Spring security with JWT utilizing Redis cache for Refresh Token.",
-            image: springSecurityPng,
-            technologies: [
-                {name: "Spring", icon: SiSpring, bgColor: "bg-green-600"},
-                {name: "Redis", icon: DiRedis, bgColor: "bg-gray-800", textColor: "text-red-400"},
-                {name: "Jwt", icon: SiJsonwebtokens, bgColor: "bg-black"},
-                {name: "Postgres", icon: SiPostgresql, bgColor: "bg-blue-500"},
-                {name: "REST API", icon: FaServer, bgColor: "bg-white", textColor: "text-gray-900"},
-            ],
-            sourceLinks: [
-                {name: "Source Code", url: "https://github.com/RoaTheDev/spring-security-redis"}
-            ],
-            youtube: "https://www.youtube.com/watch?v=wWrGbOV7ssE&t=7s"
-        },
-        {
-            id: 2,
             title: "Anime Ecommerce Shop",
             description: "A fullstack ecommerce application inspired by Ceres Fauna",
             image: faunaMarket,
@@ -57,7 +40,7 @@ export const ProjectSection = () => {
             ]
         },
         {
-            id: 3,
+            id: 2,
             title: "POS System",
             description: "Developed a PWA-based POS system with Firebase Auth, customer/product management, image uploads, printing, and currency\n" +
                 "conversion (USD, THB, KHR).",
@@ -74,6 +57,24 @@ export const ProjectSection = () => {
                 {name: "Source code", url: "https://github.com/RoaTheDev/POS-System-NextJS"},
             ]
         },
+        {
+            id: 3,
+            title: "Spring Security via JWT With Redis",
+            description: "This is a custom implementation of Spring security with JWT utilizing Redis cache for Refresh Token.",
+            image: springSecurityPng,
+            technologies: [
+                {name: "Spring", icon: SiSpring, bgColor: "bg-green-600"},
+                {name: "Redis", icon: DiRedis, bgColor: "bg-gray-800", textColor: "text-red-400"},
+                {name: "Jwt", icon: SiJsonwebtokens, bgColor: "bg-black"},
+                {name: "Postgres", icon: SiPostgresql, bgColor: "bg-blue-500"},
+                {name: "REST API", icon: FaServer, bgColor: "bg-white", textColor: "text-gray-900"},
+            ],
+            sourceLinks: [
+                {name: "Source Code", url: "https://github.com/RoaTheDev/spring-security-redis"}
+            ],
+            youtube: "https://www.youtube.com/watch?v=wWrGbOV7ssE&t=7s"
+        },
+
 
     ];
 

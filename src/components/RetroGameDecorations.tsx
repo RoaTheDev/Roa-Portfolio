@@ -38,7 +38,7 @@ const PixelCloud = () => (
 );
 
  const PixelHeart = () => (
-    <div className="absolute top-18 left-10 w-12 h-12 animate-pixel-pulse">
+    <div className="absolute top-18 left-4 w-12 h-12 animate-pixel-pulse">
         <svg viewBox="0 0 24 24" fill="currentColor" className="text-red-500">
             <path
                 d="M6,6 h2 v2 h2 v2 h4 v-2 h2 v-2 h2 v2 h2 v2 h2 v4 h-2 v2 h-2 v2 h-2 v2 h-4 v-2 h-2 v-2 h-2 v-2 h-2 v-4 h2 v-2 h2 z"/>

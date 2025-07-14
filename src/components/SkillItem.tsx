@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 
 interface SkillItemProps {
     name: string;
@@ -8,7 +8,7 @@ interface SkillItemProps {
     icon: React.ReactNode;
 }
 
-export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }) => {
+export const SkillItem: React.FC<SkillItemProps> = ({name, level, color, icon}) => {
     const [animatedLevel, setAnimatedLevel] = useState(0);
     const elementRef = useRef<HTMLDivElement>(null);
 
@@ -22,7 +22,8 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
             "blue-500": "border-blue-500",
             "pink-500": "border-pink-500",
             "purple-400": "border-purple-400",
-            "blue-400": "border-blue-400"
+            "blue-400": "border-blue-400",
+            "gray-300": "border-gray-300"
         };
         return colorMap[color] || "border-cyan-400";
     };
@@ -36,7 +37,8 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
             "blue-500": "text-blue-500",
             "pink-500": "text-pink-500",
             "purple-400": "text-purple-400",
-            "blue-400": "text-blue-400"
+            "blue-400": "text-blue-400",
+            "gray-300": "text-gray-300"
         };
         return colorMap[color] || "text-cyan-400";
     };
@@ -50,7 +52,8 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
             "blue-500": "bg-blue-500",
             "pink-500": "bg-pink-500",
             "purple-400": "bg-purple-400",
-            "blue-400": "bg-blue-400"
+            "blue-400": "bg-blue-400",
+            "gray-300": "bg-gray-300"
         };
         return colorMap[color] || "bg-cyan-400";
     };
@@ -71,7 +74,7 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
                     return () => clearInterval(interval);
                 }
             },
-            { threshold: 0.1 }
+            {threshold: 0.1}
         );
 
         if (elementRef.current) {
@@ -88,7 +91,7 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
     return (
         <div
             ref={elementRef}
-            className={`bg-purple-800 p-4 rounded-lg border-2 ${getBorderClass()} transition-all duration-300 transform hover:scale-105`}
+            className={`bg-purple-800   p-4 rounded-lg border-2 ${getBorderClass()} transition-all duration-300 transform hover:scale-105`}
         >
             <h3 className={`text-xl font-bold ${getTextClass()} mb-2 flex items-center`}>
                 <span className="mr-2 text-3xl">{icon}</span> {name}
@@ -96,7 +99,7 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, level, color, icon }
             <div className="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
                 <div
                     className={`${getBgClass()} h-4 rounded-full transition-all duration-1000 ease-out`}
-                    style={{ width: `${animatedLevel}%` }}
+                    style={{width: `${animatedLevel}%`}}
                 ></div>
             </div>
             <p className="mt-2 text-sm">Level {level}/100</p>

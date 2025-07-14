@@ -4,7 +4,16 @@ import {TechIcon} from "./TechIcon.tsx";
 import {TbBrandCSharp} from "react-icons/tb";
 import {DiCss3, DiDotnet, DiHtml5, DiMsqlServer, DiRedis} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
-import {SiGit, SiGithub, SiJavascript, SiPostman, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {
+    SiGit,
+    SiGithub,
+    SiJavascript,
+    SiNextdotjs,
+    SiPostman,
+    SiPython,
+    SiTailwindcss,
+    SiTypescript
+} from "react-icons/si";
 import {RetroGameDecorations} from "./RetroGameDecorations.tsx";
 
 export const Hero = () => {
@@ -24,7 +33,7 @@ export const Hero = () => {
     return (
         <>
             <header id={"home"}
-                className="relative bg-gradient-to-b from-purple-950 to-purple-900 overflow-hidden border-b-4 border-cyan-400">
+                    className="relative bg-gradient-to-b from-purple-950 to-purple-900 overflow-hidden border-b-4 border-cyan-400">
                 {/* Animated Pixel Background */}
                 <div className="absolute inset-0 opacity-20">
                     {backgroundPixels.map((pixel, i) => (
@@ -51,7 +60,8 @@ export const Hero = () => {
                             <div className="absolute right-0 top-2 bottom-2 w-0.5 bg-pink-500"></div>
 
                             <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 animate-glow">ROA-THE-DEV</h1>
-                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow"> Fullstack Developer</p>
+                            <p className="text-pink-500 font-bold text-2xl text-center animate-glow"> Software
+                                Developer</p>
                         </div>
 
                         {/* Developer Avatar and Character */}
@@ -91,7 +101,8 @@ export const Hero = () => {
                                                   label="MSSQL" category="backend"/>
                                         <TechIcon icon={<DiRedis className="text-red-500 text-3xl"/>}
                                                   label="Redis" category="backend"/>
-
+                                        <TechIcon icon={<SiPython className="text-yellow-500 text-3xl"/>}
+                                                  label="Redis" category="backend"/>
                                         {/* Development Tools */}
                                         <TechIcon icon={<SiGit className="text-orange-500 text-3xl"/>}
                                                   label="Git" category="other"/>
@@ -108,19 +119,21 @@ export const Hero = () => {
                                         <Code className="mr-2" size={20}/> Frontend
                                     </h3>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 justify-items-center">
-                                        <TechIcon icon={<DiHtml5 className="text-red-400 "></DiHtml5>} label="Html"
-                                                  category="frontend"/>
-
-                                        <TechIcon icon={<DiCss3 className="text-blue-500 "/>} label="CSS"
-                                                  category="frontend"/>
-                                        <TechIcon icon={<SiJavascript className="text-yellow-300 "/>} label="Js"
-                                                  category="frontend"/>
-                                        <TechIcon icon={<SiTypescript className="text-blue-500 "></SiTypescript>} label="Ts"
+                                        <TechIcon icon={<SiNextdotjs className="text-black "/>} label="NextJS"
                                                   category="frontend"/>
                                         <TechIcon icon={<FaReact className="text-blue-400 "/>} label="React"
                                                   category="frontend"/>
+                                        <TechIcon icon={<SiJavascript className="text-yellow-300 "/>} label="Javascript"
+                                                  category="frontend"/>
                                         <TechIcon icon={<SiTailwindcss className="text-blue-500 "/>}
                                                   label="Tailwind" category="frontend"/>
+                                        <TechIcon icon={<div className={"flex"}><DiHtml5 className="text-red-400 "/>
+                                            <DiCss3 className="text-blue-500"/> </div>} label="HTML&CSS"
+                                                  category="frontend"/>
+
+                                        <TechIcon icon={<SiTypescript className=" text-blue-500 "></SiTypescript>}
+                                                  label=" Typescript"
+                                                  category="frontend"/>
 
 
                                     </div>
